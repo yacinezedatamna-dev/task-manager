@@ -1,2 +1,97 @@
-# task-manager
-A modern task manager built with PHP &amp; MySQL — Kanban board, drag &amp; drop, dark/light mode, and full Arabic (RTL) support.
+<div align="center">
+
+# 🚀 TaskFlow
+
+### نظام إدارة مهام عصري بـ PHP و MySQL
+
+**واجهة أنيقة، لوحة Kanban تفاعلية، دعم كامل للعربية، ووضع ليلي/نهاري.**
+
+[![PHP](https://img.shields.io/badge/PHP-8.1+-777BB4?logo=php&logoColor=white)](https://www.php.net/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0+-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
+[![RTL](https://img.shields.io/badge/RTL-العربية-blue.svg)]()
+
+[المميزات](#-المميزات) · [التقنيات](#️-التقنيات-المستخدمة) · [التثبيت](#-التثبيت) · [هيكل المشروع](#-هيكل-المشروع) · [الاستخدام](#-الاستخدام)
+
+</div>
+
+---
+
+## ✨ عن المشروع
+
+**TaskFlow** هو تطبيق ويب متكامل لإدارة المهام الشخصية، مبني بـ PHP خالص (بدون أطر عمل) و MySQL. يوفّر تجربة عصرية بأسلوب **Kanban** مع سحب وإفلات، وإحصائيات مباشرة، وفلاتر ذكية — كل ذلك بواجهة عربية كاملة (RTL) وتصميم مستوحى من أحدث اتجاهات 2027.
+
+المشروع مثالي لـ:
+- 👨‍💻 المطوّرين الذين يتعلمون PHP و MySQL من خلال مشروع حقيقي.
+- 🎓 الطلاب الذين يبحثون عن مشروع تخرّج أو بورتفوليو.
+- 🏢 الفرق الصغيرة التي تحتاج مدير مهام خفيف الوزن ومستقل.
+
+---
+
+## 🎯 المميزات
+
+### 🔐 المصادقة والأمان
+- تسجيل حسابات جديدة مع تحقق كامل من البيانات
+- تشفير كلمات المرور بـ `password_hash()` (bcrypt)
+- حماية CSRF لكل الطلبات
+- حماية XSS عبر `htmlspecialchars()`
+- Prepared Statements (PDO) لمنع SQL Injection
+- تجديد الجلسة عند تسجيل الدخول (`session_regenerate_id`)
+
+### 📋 إدارة المهام
+- إنشاء، تعديل، وحذف المهام بسهولة
+- لوحة **Kanban** بثلاثة أعمدة (قيد الانتظار / قيد التنفيذ / مكتملة)
+- **Drag & Drop** لتغيير حالة المهمة بسحبها بين الأعمدة
+- أولويات (منخفضة / متوسطة / عالية) بألوان مميزة
+- تاريخ استحقاق اختياري مع تنبيه بصري للمهام المتأخرة
+
+### 🎨 الواجهة والتجربة
+- تصميم **Glassmorphism** عصري مع تدرجات لونية
+- **Dark Mode / Light Mode** مع حفظ التفضيل في `localStorage`
+- دعم كامل للعربية (RTL)
+- تصميم **Responsive** بالكامل للجوال والتابلت والحاسوب
+- **Toast Notifications** أنيقة بدلًا من تنبيهات المتصفح المزعجة
+- إحصائيات مباشرة (إجمالي المهام، قيد الانتظار، قيد التنفيذ، مكتملة)
+
+### 🔍 البحث والفلترة
+- بحث فوري في العنوان والوصف (بدون إعادة تحميل)
+- فلترة حسب الأولوية
+- فلترة حسب الحالة عبر الأعمدة
+
+### 🌐 الاستعداد للنشر
+- متوافق مع **PWA** (قابل للتثبيت على الجوال كتطبيق)
+- يعمل على استضافات مشتركة مجانية (InfinityFree، ByetHost...)
+- بنية ملفات بسيطة وسهلة النقل
+
+---
+
+## 🛠️ التقنيات المستخدمة
+
+| الطبقة | التقنية |
+|---|---|
+| **الواجهة الأمامية** | HTML5 · CSS3 (Custom Properties) · Vanilla JavaScript (ES6+) |
+| **الخادم** | PHP 8.1+ (بدون إطار عمل) |
+| **قاعدة البيانات** | MySQL 8.0+ / MariaDB 10.5+ |
+| **الاتصال** | PDO مع Prepared Statements |
+| **الخط** | Cairo (Google Fonts) |
+| **الأدوات** | Git · GitHub · XAMPP (للتطوير المحلي) |
+
+---
+
+## 🚀 التثبيت
+
+### المتطلبات
+
+- **PHP** الإصدار 8.1 أو أحدث
+- **MySQL** الإصدار 8.0 أو MariaDB 10.5+
+- **Apache** أو Nginx
+- **XAMPP / WAMP / MAMP / Laragon** (للتطوير المحلي)
+
+### الخطوات
+
+**1. استنساخ المستودع:**
+
+```bash
+git clone https://github.com/YOUR_USERNAME/task-manager.git
+cd task-manager
